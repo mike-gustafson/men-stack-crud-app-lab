@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head') %>
+        <title>
+            <%= title %>
+        </title>
+</head>
+
+<body>
+    <%- include('../partials/nav') %>
+
+        <div class="container">
+            <div class="center-align" style="margin-top: 40px;">
+                <h3>Here's all the items being brought to your potluck!</h1>
+                    <p>Click the item name to view it's details</p>
+                    <div class="center-align" style="margin-top: 40px;">
+                        <div class="row">
+                            <% items.forEach(item=> { %>
+                                <div class="col s12 m3">
+                                    <a href="/items/<%= item.id %>">
+                                        <div class="card blue darken-2">
+                                            <div class="card-content white-text">
+                                                <span class="card-title">
+                                                    <%= item.name %>
+                                                </span>
+                                                <p>Quantity: <%= item.quantity %>
+                                                </p>
+                                                <p>Dietary Accomodations: <%= item.dietaryAccomodations %>
+                                                </p>
+                                                <p>Category: <%= item.category %>
+                                                </p>
+                                                <p>Person bringing dish: <%= item.person %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <% }) %>
+                        </div>
+                    </div>
+                    <a href="/items/new" class="btn blue darken-2">Add New Item</a>
+                    <a href="/" class="btn blue darken-2">Home</a>
+            </div>
+        </div>
+
+</body>
+
+</html>

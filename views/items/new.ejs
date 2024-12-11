@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <%- include('../partials/head') %>
+    <title><%= title %></title>
+</head>
+<body>
+<%- include('../partials/nav') %>
+
+<div class="container">
+    <h1 class="center-align">Add New Item</h1>
+    <form action="/items" method="POST">
+        <div class="input-field">
+            <input type="text" name="name" id="name">
+            <label for="name">Item Name</label>
+        </div>
+        <div class="input-field">
+            <input type="number" name="quantity" id="quantity">
+            <label for="quantity">Quantity</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="dietaryAccomodations" id="dietaryAccomodations">
+            <label for="dietaryAccomodations">Dietary Accomodations</label>
+        </div>  
+        <div class="input-field">
+            <input type="text" name="category" id="category">
+            <label for="category">Category</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="person" id="person">
+            <label for="person">Person bringing dish</label>
+        <div class="center-align">
+            <button class="btn blue darken-2">Add Item</button>
+            <a href="/items" class="btn red darken-2">Cancel</a>
+        </div>
+    </form> 
+</div>
+    
+</body>
+</html>

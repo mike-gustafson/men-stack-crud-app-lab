@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <%- include('../partials/head') %>
+    <title><%= title %></title>
+</head>
+<body>
+<%- include('../partials/nav') %>
+
+<div class="container">
+    <div class="center-align" style="margin-top: 40px;">
+        <h1><%= item.name %></h1>
+        <p>Quantity: <%= item.quantity %></p>
+        <p>Dietary Accomodations: <%= item.dietaryAccomodations %></p>
+        <p>Category: <%= item.category %></p>
+        <p>Person bringing dish: <%= item.person %></p>
+        <a href="/items" class="btn blue darken-2">Return to Items</a>
+        <a href="/items/<%= item.id %>/edit" class="btn blue darken-2">Edit Item</a>
+    </div>
+    </div>
+    
+</body>
+</html>
